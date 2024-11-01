@@ -45,26 +45,6 @@ st.header("Feature Importance")
 feature_importance = rf_model.feature_importances_
 st.bar_chart(pd.DataFrame(feature_importance, index=X.columns, columns=["Importance"]))
 
-# Feature Importance Display
-st.header("Feature Importance")
-feature_importance = rf_model.feature_importances_
-
-# Create a DataFrame for the feature importance
-importance_df = pd.DataFrame({
-    'Feature': X.columns,
-    'Importance': feature_importance
-}).sort_values(by='Importance', ascending=False)
-
-# Plot using Matplotlib
-plt.figure(figsize=(10, 6))
-plt.bar(importance_df['Feature'], importance_df['Importance'])
-plt.xticks(rotation=45, ha='right')
-plt.title("Feature Importance")
-plt.xlabel("Features")
-plt.ylabel("Importance")
-plt.tight_layout()
-st.pyplot(plt)
-
 
 # Dataset Overview
 st.header("Dataset Overview")
