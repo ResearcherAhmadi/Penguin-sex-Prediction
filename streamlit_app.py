@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
 # Load the dataset
-penguins = pd.read_csv("/kaggle/input/palmer-archipelago-antarctica-penguin-data/penguins_lter.csv")
+penguins = pd.read_csv("penguins_lter.csv")
 
 # Prepare a smaller version of the dataset for the Random Forest Model
 df = pd.DataFrame({
